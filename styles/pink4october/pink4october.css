@@ -1,0 +1,66 @@
+/*
+Author Name		: 	Steve Lam
+Author Site		: 	http://stevelam.org
+Style Name		: 	True Blue: Pink for October
+Style URI		:	http://stevelam.org/projects/trueblue/
+Version			:	1.0
+Tags			:	color
+*/
+
+
+body.m10 a {
+	color: #933;
+}
+
+body.m10 h3 a,
+body.m10 div.secondary h4 {
+	color: #600;
+}
+
+body.home.m10 .firstpage .p1 .entry-head {
+	background-color: #EEE0E3;
+}
+
+/* Comment this out to use your custom header */
+body.m10 #header {
+ 	background: url('images/pink_header_bg.png');
+}
+
+
+
+body.m10 #page #header {
+	background-position: right 15px;
+}
+
+body.m10 .comments #commentlist li.bypostauthor,
+body.m10 .comments #pinglist {
+	background-color: #EEE0E3;
+	border-color: #DFA9B3;
+}
+
+body.m10 div.navigation a {
+	color: #ccc;
+}
+
+body.m10 .sb-flickr div a:hover img {
+	border-color: #DFA9B3;
+}
+
+/* Two Columns */
+
+body.m10.columns-two {
+	background-color: #999;
+}
+
+body.m10.columns-two #page {
+ 	background: url('images/pink_c2_page_bg.png');
+}
+
+body.m10.columns-two #header-overlay {
+	background: url('images/pink_c2_header_overlay.png');
+}
+
+body.m10.columns-two #footer {
+ 	background: url('images/pink_c2_footer_bg.png');
+}
+
