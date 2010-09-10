@@ -44,7 +44,7 @@ body.single #primary .k2-asides .entry-content {
 	line-height: 1.6em;
 }
 
-div#footer p {
+#footer p {
 	line-height: 1.3em;
 }
 
@@ -81,7 +81,7 @@ body {
 	margin: 0 0 2em;
 }
 
-#page div.content {
+#page .content {
 	padding: 0px 10px;
 }
 
@@ -162,7 +162,7 @@ body {
 	background: url('../images/quote-small.gif') left top no-repeat;
 }
 
-div.page-head {
+.page-head {
 	margin: 35px 0px 10px;
 }
 
@@ -232,7 +232,7 @@ pre, code {
 
 /* Sidebar */
 
-div.secondary div {
+.secondary div {
 	position: relative;
 }
 
@@ -240,7 +240,7 @@ div.secondary div {
 	width: 85%;
 }
 
-div.secondary #searchreset {
+.secondary #searchreset {
 	width: 16px;
 	height: 16px;
 	background: url('../icons/delete.gif') center center;
@@ -369,7 +369,7 @@ body.page .comments {
 
 /* Paged Navigation */
 
-div.navigation {
+.navigation {
 	height: 20px;
 	margin: 0px auto;
 	padding: 5px 0px;
@@ -395,26 +395,26 @@ div.navigation {
 	-moz-border-radius-bottomright:8px;
 }
 
-div.navigation span {
+.navigation span {
 	display: none;
 }
 
-div.navigation a {
+.navigation a {
 	color: #ccc;
 }
 
-div.navigation a:hover {
+.navigation a:hover {
 	color: #fff;
 }
 
-div.navigation .nav-previous {
+.navigation .nav-previous {
 	margin-left: 16px;
 	padding-left: 24px;
 	background: url('../icons/book_previous.png') left center no-repeat;
 	width: auto;
 }
 
-div.navigation .nav-next {
+.navigation .nav-next {
 	margin-right: 16px;
 	padding-right: 24px;
 	background: url('../icons/book_next.png') right center no-repeat;

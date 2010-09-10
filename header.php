@@ -43,13 +43,13 @@ defined( 'K2_CURRENT' ) or die ( __('Error: This file can not be loaded directly
 
 	<?php /* K2 Hook */ do_action('template_before_header'); ?>
 
-	<div id="header">
+	<header id="header">
 
 		<?php locate_template( array('blocks/k2-header.php'), true ); ?>
 
 		<?php /* K2 Hook */ do_action('template_header'); ?>
 
-	</div> <!-- #header -->
+	</header>
 
 	<hr />
 
