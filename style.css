@@ -6,14 +6,7 @@ Author:			Steve Lam
 Author URI:		http://stevelam.org/
 Version:		2.0-bleeding
 Template:		k2
-
-Notes:
-	$Id: style.css 64 2010-09-09 07:18:53Z spikeyslam@gmail.com $
 */
-
-/* Core CSS */
-@import url('css/core.css');
-
 
 /*
 	Less Framework 2, version 2.0
@@ -56,13 +49,13 @@ figure img {width: 100%;}
 
 body {
 	background: #657585;
-	padding: 24px 36px 0;
-	width: 696px;
+	width: 704px;
+	padding: 24px 32px;
 	margin: 0 auto;
 }
 
 body.trueblue #page {
-	width: 100%;
+	width: 700px;
 	border: 2px solid #ddd;
 
 	background: #ccc;
@@ -107,12 +100,12 @@ body.trueblue #page {
 }
 
 body.columns-one .primary {
-	width: 672px;
+	width: 676px;
 }
 
 body.columns-two .primary,
 body.columns-three .primary {
-	width: 443px;
+	width: 447px;
 }
 
 #widgets-sidebar-1,
@@ -145,8 +138,8 @@ body.columns-three .primary {
 @media only screen and (max-width: 767px) {
 	
 	body {
-		padding: 24px 28px 0;
-		width: 264px;
+		padding: 16px;
+		width: 288px;
 	}
 	
 	body.trueblue #page {
@@ -170,14 +163,18 @@ body.columns-three .primary {
 	}
 
 	.primary {
-		width: 260px !important;
+		width: 284px !important;
 	}
 
 	#widgets-sidebar-1,
 	#widgets-sidebar-2 {
 		padding: 20px 10px 10px;
 		margin: -10px 0 0;
-		width: 240px;
+		width: 264px;
+	}
+
+	.post, body.attachment .attachment {
+		padding: 0;
 	}
 }
 
@@ -189,17 +186,28 @@ body.columns-three .primary {
 @media only screen and (min-width: 1224px) {
 	
 	body {
-		padding: 24px 48px 0;
-		width: 1128px;
+		width: 1160px;
+	}
+
+	body.trueblue #page {
+		width: 1156px;
 	}
 	
 	body.columns-three .primary {
-		width: 646px;
+		width: 674px;
 	}
 
 	body.columns-three #widgets-sidebar-2 {
 		padding-top: 10px;
 		margin-top: 0;
+	}
+
+	body.columns-three.smartposition #rollingarchivesbg {
+		width: 1136px;
+		margin-left: -2px;
+	}
+	body.columns-three.smartposition #rollnavigation {
+		width: 634px;
 	}
 
 	body.columns-two .primary {
@@ -211,6 +219,494 @@ body.columns-three .primary {
 	}
 }
 
+
+/* Typography */
+
+.blog-title, .description, h1, h2, h3, h4, h5, h6, #wp-calendar caption {
+	font-family: Georgia, 'Times New Roman', serif;
+}
+
+
+pre, code {
+	font-family: 'Bitstream Vera Sans Mono', Monaco, 'Courier New', monospace;
+}
+
+#header ul.headermenu {
+	font-size: 1.2em;
+}
+
+#page #primary .entry-content,
+body.single #primary .k2-asides .entry-content {
+	font-size: 1.4em;
+	color: #444;
+	line-height: 1.6em;
+}
+
+.comments #commentlist .comment-content {
+	line-height: 1.6em;
+}
+
+#primary .entry-content h4 {
+	font-size: 1.6em;
+}
+
+#page .secondary {
+	font-size: 1.2em;
+}
+
+#page .secondary .sb-asides p {
+	line-height: 1.6em;
+}
+
+#footer p {
+	line-height: 1.3em;
+}
+
+#footer small, small.entry-meta {
+	font-size: 1.1em;
+}
+
+#wp-calendar caption {
+	font-size: 1.2em;
+}
+
+/* Layout */
+
+#page {
+	padding: 0px;
+	border: none;
+}
+
+.wrapper {
+	padding: 0 10px;
+	margin-top: -10px;
+}
+
+#primary {
+	padding: 0;
+}
+
+#widgets-top {
+	margin: 0 0 2em;
+}
+
+#page .content {
+	padding: 0px 10px;
+}
+
+/* Header */
+
+#header {
+	background: transparent url('images/header_bg.jpg') repeat-x;
+	position: relative;
+	height: 200px;
+	border: 2px solid #000;
+
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+#header .blog-title {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	top: 100px;
+	left: 50px;
+	text-shadow: 2px 2px 5px black;
+	z-index: 50;
+}
+
+#header .description {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	top: 140px;
+	left: 50px;
+	font-size: 1.4em;
+	font-style: italic;
+	text-shadow: 2px 2px 2px black;
+	z-index: 50;
+}
+
+#header #header-overlay {
+	width: 100%;
+	height: 235px;
+	z-index: 10;
+}
+
+/* Header Menu */
+
+.headermenu {
+	top: 0;
+	bottom: auto;
+}
+
+.menu > ul > li > a {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.menu > ul > li:hover > a,
+.menu > ul > li.sfHover > a { /* Top level hover*/
+	color: white;
+	background-color: #999;
+}
+
+
+/* Primary */
+
+#page h2 {
+	margin-top: 20px;
+}
+
+#page blockquote {
+	background-color: transparent;
+	padding:0 20px 0 50px;
+}
+
+#page .k2-asides blockquote {
+	margin: 1em 0px;
+	padding: 0px 0px 0px 20px;
+	background: url('images/quote-small.gif') left top no-repeat;
+}
+
+.page-head {
+	margin: 35px 0px 10px;
+}
+
+
+/* Post/Page Content */
+
+body.home #current-content .p1 {
+	margin-top: 25px;
+}
+
+body.paged #current-content .p1 {
+	margin-top: 0px;
+}
+
+
+body.home .firstpage .p1 .entry-head {
+	background-color: #9cf;
+}
+
+.category-noteworthy .entry-head,
+.tag-noteworthy .entry-head {
+	background-color: #9cf;
+}
+
+.entry-head {
+	padding: 5px 10px 10px;
+	background: #ddd url('images/entry-head_bg.png') top left no-repeat;
+	margin-bottom: 1em;
+}
+
+.entry-head .entry-edit {
+	top: 10px;
+	right: 8px;
+}
+	
+body.sidebars-none .entry-head {
+	background: transparent;
+}
+
+pre, code {
+	text-align: left;
+}
+
+/* Metadata */
+
+
+header .entry-meta {
+	color: #999;
+	background: url('icons/time.png') no-repeat left top;
+	padding-left: 20px;
+}
+
+.commentslink {
+	background: url('icons/comments.gif') left center no-repeat;
+	padding: 2px 0px 2px 20px;
+	white-space: nowrap;
+}
+
+.entry-head .entry-tags {
+	margin-left: -20px;
+	}
+
+.entry-tags {
+	background: url('icons/tag_blue.gif') left 2px no-repeat;
+	padding: 2px 0px 2px 20px;
+}
+
+/* Sidebar */
+
+.secondary div {
+	position: relative;
+}
+
+#s {
+	width: 85%;
+}
+
+.secondary #searchreset {
+	width: 16px;
+	height: 16px;
+	background: url('icons/delete.gif') center center;
+	right: 4px;
+	top: 4px;
+}
+
+#searchload {
+	background: url('images/spinner.gif') no-repeat center center;
+	right: 4px;
+	top: 4px;	
+}
+
+.sb-pagemenu li:before,
+.sb-latest li:before,
+.sb-categories li:before,
+.sb-months li:before,
+.sb-links ul li ul li:before,
+.widget_recent_entries li:before
+{
+	content: "\00BB \0020";
+}
+
+.sb-pagemenu .current_page_item a {
+	font-weight: bold;
+}
+
+.sb-pagemenu ul {
+	margin-bottom: 1em;
+}
+
+body.columns-three #sidebar-2 #wp-calendar td {
+	color: #888;
+}
+
+
+/* Footer */
+
+#footer {
+	padding: 10px;
+	color: #666;
+}
+
+#footer a {
+	color: #333;
+	font-weight: bold;
+	border: none;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+
+/* Comments */
+
+.comments {
+	background: #e5f0ff;
+	margin: 20px -10px 0;
+	padding: 10px 20px 20px;
+	border-top: 2px solid #aed2ff;
+	}
+
+body.page .comments {
+	margin-bottom: -15px;
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 8px;
+	}
+
+.comments #commentlist {
+	margin: 20px 0px;
+	padding: 0px;
+}
+
+.comments #commentlist .comment-content {
+	padding: 0px;
+}
+
+.comments .navigation {
+	background: #aed2ff;
+	width: auto;
+	margin: 20px -20px;
+}
+
+.comments .navigation a {
+	color: #666;
+	}
+
+
+#commentlist .bypostauthor {
+	background: #fff;
+	border: 1px solid #ddd;
+}
+
+.comments #commentlist li a img.gravatar {
+	float: right;
+	border: 1px solid #999;
+	padding: 3px;
+	background: #fff;
+}
+
+.comments #commentlist li a:hover img.gravatar {
+	border: 3px solid #27d;
+	padding: 1px;
+}
+
+.comments #commentlist .comment-meta {
+	color: #777;
+	background: url('icons/calendar.gif') left center no-repeat;
+}
+
+.comments #pinglist {
+	background: transparent;
+}
+
+.comments #pinglist li {
+	margin-left: 52px;
+}
+
+.comments #pinglist li span.favatar img {
+	margin-left: -42px;
+	max-width: 32px;
+}
+
+/* Paged Navigation */
+
+.navigation {
+	padding: 5px 20px;
+}
+
+
+/* Rolling Archives */
+
+#page #rollingarchives {
+	width: auto;
+	border-bottom: 1px solid #ccc;
+	margin: 0 20px 20px;
+}
+
+body.smartposition #rollingarchivesbg {
+	background: #ccc;
+
+	-moz-box-shadow: 0px 2px 6px #333;
+	-webkit-box-shadow: 0px 2px 6px #333;
+	box-shadow: 0px 2px 6px #333;
+
+	-webkit-border-bottom-right-radius: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+
+body.smartposition #rollpages,
+body.smartposition #rollingarchives a {
+	color: #fff;
+}
+
+body.smartposition #page #rollingarchives {
+	border-bottom: none;
+}
+
+#primary .firstpage #texttrimmer,
+#primary .firstpage #pagetrackwrap {
+	visibility: visible;
+}
+
+#primary #rollingarchives,
+#rollingarchives #rollnotices {
+	border: none;
+}
+#rollingarchives #rollnavigation {
+	position: relative;
+	}
+
+
+#rollingarchives #rollload {
+	background: url('images/spinner.gif') no-repeat center center;
+	left: 325px;
+	margin: 0px;
+}
+
+#rollingarchives #rollpages {
+	left: 60px;
+	width: 80px;
+	text-align: center;
+}
+
+
+#rollingarchives #rollnext span,
+#rollingarchives #rollprevious span {
+	color: #ccc;
+}
+
+#rollingarchives #texttrimmer {
+	right: 80px;
+}
+
+#rollingarchives #pagetrackwrap {
+	position: absolute;
+	top: 18px;
+	left: 160px;
+	width: 50%;
+}
+
+
+/* Miscellaneous */
+
+a.more-link {
+	display: block;
+	margin: 1em 15px 0px 0px;
+	padding: 2px 0px 2px 20px ;
+	background: url('icons/page_white_go.gif') left center no-repeat;
+}
+
+.alert {
+	background: #FFF6BF url('icons/exclamation.gif') 8px 8px no-repeat;
+	border: 1px solid #FFD324;
+	border-top: 4px solid #FFD324;
+	text-align: left;
+	margin: 10px auto;
+	padding: 5px 20px 5px 32px;
+}
+
+.category-noteworthy h3.entry-title,
+.tag-noteworthy h3.entry-title {
+	background: url('icons/star.gif') no-repeat right center;
+	padding-right: 25px;
+	display: inline;
+}
+
+.download {
+	background: url('icons/disk.gif') left top no-repeat;
+	text-align: left;
+	padding-left: 24px;
+}
+
+.feedlink {
+	background-image: url('icons/feed.gif');
+}
+
+/* FlickrRSS */
+
+.sb-flickr div a img {
+	padding: 3px;
+	border: 1px solid #999;
+	margin: 5px;
+}
+
+.sb-flickr div a:hover img {
+	border: 3px solid #27d;
+	padding: 1px;
+}
 
 /*
 	"Once in a blue moon there is a blue sky. I wear blue jeans and fly my blue kite.

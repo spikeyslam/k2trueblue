@@ -18,10 +18,7 @@ defined( 'K2_CURRENT' ) or die ( __('Error: This file can not be loaded directly
 
 <title><?php wp_title('&laquo;', true, 'right'); ?><?php bloginfo('name'); ?></title>
 
-<?php if ( get_option('k2usestyle') != 0 ): ?>
-	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_url'); ?>/style.css" />
-<?php endif; ?>
-
+<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_url'); ?>/style.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); ?>" />
 
 <?php if ( is_singular() ): ?>
