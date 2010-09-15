@@ -41,185 +41,6 @@ figure img {width: 100%;}
 
 
 
-
-/*
-	Default 768 px layout for iPads, netbooks, and IE
-	(All other layouts inherit styles from this layout)
-*/
-
-body {
-	background: #657585;
-	width: 704px;
-	padding: 24px 32px;
-	margin: 0 auto;
-}
-
-body.trueblue #page {
-	width: 700px;
-	border: 2px solid #ddd;
-
-	background: #ccc;
-
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
-
-	-moz-box-shadow: 0px 4px 12px #111;
-	-webkit-box-shadow: 0px 4px 12px #111;
-	box-shadow: 0px 4px 12px #111;
-}
-
-#header {
-	margin: 10px 10px 0;
-}
-
-.primary,
-#widgets-sidebar-1,
-#widgets-sidebar-2 
-{
-	border-style: solid;
-	border-width: 2px;
-	border-color: #fff;
-
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
-
-	-moz-box-shadow: 0px 2px 6px #333;
-	-webkit-box-shadow: 0px 2px 6px #333;
-	box-shadow: 0px 2px 6px #333;
-	position: relative;
-	/*background: url(images/grad-top.png) repeat-x left top;*/
-}
-
-.primary {
-	border-color: #fff;
-	background-color: #fff;
-	margin: 0;
-	z-index: 3;
-}
-
-body.columns-one .primary {
-	width: 676px;
-}
-
-body.columns-two .primary,
-body.columns-three .primary {
-	width: 447px;
-}
-
-#widgets-sidebar-1,
-#widgets-sidebar-2 {
-	width: 200px;
-	padding: 10px 10px 10px 25px;
-	margin: 0 0 0 -10px;
-}
-
-#widgets-sidebar-1 {
-	border-color: #eee;
-	background-color: #eee;
-	z-index: 2;
-}
-
-#widgets-sidebar-2 {
-	border-color: #ddd;
-	background-color: #ddd;
-	z-index: 1;
-
-	margin-top: -10px;
-	padding-top: 20px;
-}
-
-
-/* 
-	320 px layout for smartphones
-*/
-
-@media only screen and (max-width: 767px) {
-	
-	body {
-		padding: 16px;
-		width: 288px;
-	}
-	
-	body.trueblue #page {
-		width: 100%;
-		border: none;
-	
-		background: transparent;
-	
-		-moz-box-shadow: none;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-		padding: 0;
-	}
-
-	#header {
-		margin: 0;
-	}
-
-	.wrapper {
-		padding: 0;
-	}
-
-	.primary {
-		width: 284px !important;
-	}
-
-	#widgets-sidebar-1,
-	#widgets-sidebar-2 {
-		padding: 20px 10px 10px;
-		margin: -10px 0 0;
-		width: 264px;
-	}
-
-	.post, body.attachment .attachment {
-		padding: 0;
-	}
-}
-
-
-/* 
-	1224 px layout for desktops and laptops
-*/
-
-@media only screen and (min-width: 1224px) {
-	
-	body {
-		width: 1160px;
-	}
-
-	body.trueblue #page {
-		width: 1156px;
-	}
-	
-	body.columns-three .primary {
-		width: 674px;
-	}
-
-	body.columns-three #widgets-sidebar-2 {
-		padding-top: 10px;
-		margin-top: 0;
-	}
-
-	body.columns-three.smartposition #rollingarchivesbg {
-		width: 1136px;
-		margin-left: -2px;
-	}
-	body.columns-three.smartposition #rollnavigation {
-		width: 634px;
-	}
-
-	body.columns-two .primary {
-		width: 875px;
-	}
-
-	body.columns-one .primary {
-		width: 1104px;
-	}
-}
-
-
 /* Typography */
 
 .blog-title, .description, h1, h2, h3, h4, h5, h6, #wp-calendar caption {
@@ -277,22 +98,14 @@ body.single #primary .k2-asides .entry-content {
 	border: none;
 }
 
-.wrapper {
-	padding: 0 10px;
-	margin-top: -10px;
-}
-
-#primary {
-	padding: 0;
+#page .content {
+	margin: 15px 0;
 }
 
 #widgets-top {
 	margin: 0 0 2em;
 }
 
-#page .content {
-	padding: 0px 10px;
-}
 
 /* Header */
 
@@ -348,6 +161,9 @@ body.single #primary .k2-asides .entry-content {
 	-moz-border-radius: 4px;
 }
 
+.headermenu > ul > li > a {
+}
+
 .menu > ul > li:hover > a,
 .menu > ul > li.sfHover > a { /* Top level hover*/
 	color: white;
@@ -356,6 +172,15 @@ body.single #primary .k2-asides .entry-content {
 
 
 /* Primary */
+
+.primary {
+	padding: 0 15px;
+}
+
+.post,
+body.attachment .attachment {
+	padding: 0;
+}
 
 #page h2 {
 	margin-top: 20px;
@@ -450,6 +275,10 @@ header .entry-meta {
 	width: 85%;
 }
 
+body.smartposition .widget_search {
+	
+}
+
 .secondary #searchreset {
 	width: 16px;
 	height: 16px;
@@ -490,7 +319,7 @@ body.columns-three #sidebar-2 #wp-calendar td {
 /* Footer */
 
 #footer {
-	padding: 10px;
+	padding: 15px 0 10px;
 	color: #666;
 }
 
@@ -511,16 +340,13 @@ body.columns-three #sidebar-2 #wp-calendar td {
 
 .comments {
 	background: #e5f0ff;
-	margin: 20px -10px 0;
-	padding: 10px 20px 20px;
-	border-top: 2px solid #aed2ff;
-	}
-
-body.page .comments {
-	margin-bottom: -15px;
-	-moz-border-radius-bottomleft: 8px;
-	-moz-border-radius-bottomright: 8px;
-	}
+	margin: 20px 0 0;
+	padding: 10px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	/*border-top: 2px solid #aed2ff;*/
+}
 
 .comments #commentlist {
 	margin: 20px 0px;
@@ -531,15 +357,9 @@ body.page .comments {
 	padding: 0px;
 }
 
-.comments .navigation {
-	background: #aed2ff;
-	width: auto;
-	margin: 20px -20px;
-}
-
 .comments .navigation a {
 	color: #666;
-	}
+}
 
 
 #commentlist .bypostauthor {
@@ -562,6 +382,7 @@ body.page .comments {
 .comments #commentlist .comment-meta {
 	color: #777;
 	background: url('icons/calendar.gif') left center no-repeat;
+	padding: 2px 2px 2px 24px;
 }
 
 .comments #pinglist {
@@ -589,7 +410,7 @@ body.page .comments {
 #page #rollingarchives {
 	width: auto;
 	border-bottom: 1px solid #ccc;
-	margin: 0 20px 20px;
+	margin: 0 0 10px;
 }
 
 body.smartposition #rollingarchivesbg {
@@ -637,8 +458,8 @@ body.smartposition #page #rollingarchives {
 }
 
 #rollingarchives #rollpages {
-	left: 60px;
-	width: 80px;
+	left: 10%;
+	width: 20%;
 	text-align: center;
 }
 
@@ -649,14 +470,19 @@ body.smartposition #page #rollingarchives {
 }
 
 #rollingarchives #texttrimmer {
-	right: 80px;
+	right: 10%;
+	width: 20%;
+}
+
+#trimmertrim, #trimmeruntrim {
+	width: auto;
 }
 
 #rollingarchives #pagetrackwrap {
 	position: absolute;
 	top: 18px;
-	left: 160px;
-	width: 50%;
+	left: 30%;
+	width: 40%;
 }
 
 
@@ -707,6 +533,228 @@ a.more-link {
 	border: 3px solid #27d;
 	padding: 1px;
 }
+
+
+/*
+	Default 5-column, 768 px layout for iPads, netbooks, and IE
+	(All other layouts inherit styles from this layout)
+	-----------------------------------------------------------
+	1      2      3      4      5     
+	120px  264px  408px  552px  696px   (24px gutters)
+*/
+
+body {
+	background: #657585;
+	padding: 60px 36px 0;
+	width: 696px;
+	margin: 0 auto;
+}
+
+body.trueblue #page {
+	width: 692px;
+	border: 2px solid #ddd;
+
+	background: #ccc;
+
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+
+	-moz-box-shadow: 0px 4px 12px #111;
+	-webkit-box-shadow: 0px 4px 12px #111;
+	box-shadow: 0px 4px 12px #111;
+}
+
+#header {
+	margin: 10px 10px 0;
+}
+
+.wrapper {
+	padding: 0 10px;
+	margin-top: -10px;
+}
+
+.primary,
+#widgets-sidebar-1,
+#widgets-sidebar-2 
+{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #fff;
+
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+
+	-moz-box-shadow: 0px 2px 6px #333;
+	-webkit-box-shadow: 0px 2px 6px #333;
+	box-shadow: 0px 2px 6px #333;
+	position: relative;
+	/*background: url(images/grad-top.png) repeat-x left top;*/
+}
+
+.primary {
+	border-color: #fff;
+	background-color: #fff;
+	margin: 0;
+	z-index: 3;
+}
+
+body.columns-one .primary {
+	width: 638px;
+}
+
+body.columns-two .primary,
+body.columns-three .primary,
+body.smartposition #rollnavigation {
+	width: 409px;
+}
+
+.columns-one.smartposition #rollingarchivesbg,
+.columns-two.smartposition #rollingarchivesbg,
+.columns-three.smartposition #rollingarchivesbg {
+	width: 672px;
+	margin-left: -17px;
+}
+
+#widgets-sidebar-1,
+#widgets-sidebar-2 {
+	width: 200px;
+	padding: 10px 10px 10px 25px;
+	margin: 0 0 0 -10px;
+}
+
+#widgets-sidebar-1 {
+	border-color: #eee;
+	background-color: #eee;
+	z-index: 2;
+}
+
+#widgets-sidebar-2 {
+	border-color: #ddd;
+	background-color: #ddd;
+	z-index: 1;
+
+	margin-top: -10px;
+	padding-top: 20px;
+}
+
+
+/* 
+	2-column, 320 px layout for smartphones
+	---------------------------------------
+	1      2
+	120px  264px   (24px gutters)
+*/
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		padding: 10px;
+		width: 300px;
+	}
+	
+	body.trueblue #page {
+		width: 100%;
+		border: none;
+	
+		background: transparent;
+	
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		padding: 0;
+	}
+
+	#header {
+		margin: 0;
+	}
+
+	.wrapper {
+		padding: 0;
+	}
+
+	#page .primary,
+	body.smartposition #page #rollnavigation {
+		width: 266px;
+	}
+
+	#widgets-sidebar-1,
+	#widgets-sidebar-2 {
+		padding: 20px 10px 10px;
+		margin: -10px 0 0;
+		width: 276px;
+	}
+
+	#rollingarchives #pagetrackwrap,
+	#rollingarchives #texttrimmer {
+		display: none;
+	}
+
+	#rollingarchives #rollpages {
+		left: 25%;
+		width: 50%;
+	}
+
+	body.smartposition #page #rollingarchivesbg {
+		width: 300px;
+	}
+
+	.post, body.attachment .attachment {
+		padding: 0;
+	}
+}
+
+
+/* 
+	8-column, 1224 px layout for desktops and laptops
+	------------------------------------------------------------------------
+	1      2      3      4      5      6      7      8
+	120px  264px  408px  552px  696px  840px  984px  1128px   (24px gutters)
+*/
+
+@media only screen and (min-width: 1224px) {
+	
+	body {
+		padding: 72px 48px 0;
+		width: 1128px;
+	}
+
+	body.trueblue .primary,
+	body.smartposition #rollnavigation {
+		width: 612px;
+	}
+
+	body.columns-one #page {
+		width: 666px;
+	}
+
+	body.columns-one.smartposition #rollingarchivesbg {
+		width: 646px;
+	}
+
+	body.columns-two #page {
+		width: 895px;
+	}
+
+	body.columns-two.smartposition #rollingarchivesbg {
+		width: 875px;
+	}
+
+	body.columns-three #page {
+		width: 1124px;
+	}
+
+	body.columns-three #widgets-sidebar-2 {
+		padding-top: 10px;
+		margin-top: 0;
+	}
+
+	body.columns-three.smartposition #rollingarchivesbg {
+		width: 1104px;
+	}
+}
+
 
 /*
 	"Once in a blue moon there is a blue sky. I wear blue jeans and fly my blue kite.
